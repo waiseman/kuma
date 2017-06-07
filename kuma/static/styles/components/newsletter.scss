@@ -1,6 +1,6 @@
 .newsletter-box {
     position: relative;
-    @include notification-theme($default);
+    @include notification-theme('default');
     margin-bottom: $grid-spacing;
     border: none;
     padding: $grid-spacing;
@@ -33,10 +33,11 @@
     font-style: italic;
 }
 
-.newsletter-input-email {
+input.newsletter-input-email {
     box-sizing: border-box;
     width: 100%;
     max-width: 450px;
+    padding: ($grid-spacing / 2);
 }
 
 .newsletter-hide {
@@ -50,6 +51,10 @@
     h2 {
         @include bidi-style(padding-right, ($grid-spacing * 3), padding-left, 0); // leave space for close button
     }
+}
+
+.newsletter-submit {
+    padding: ($grid-spacing / 2);
 }
 
 @media print {
